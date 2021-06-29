@@ -1,0 +1,63 @@
+
+
+
+         
+body{
+  background-image:url("background.jpg");
+  
+
+}
+h1{
+  text-align: left;
+}
+header { 
+  width: 1000px;
+  background-color: rgb(206, 151, 151);
+  padding: 10px;
+  word-spacing: 30px;
+  line-height: normal;
+  font-size: 20px;
+  color: rgb(29, 25, 25);
+}
+nav  {
+  line-height: normal;
+  float: left;
+  width: 441px;
+  list-style-type: none;
+  background-color: rgb(155, 182, 214);
+  height: 300px;
+ 
+  padding: 20px;
+}
+
+article {
+  line-height: 80%;
+  float: left;
+  padding: 20px;
+  width: 500px;
+  background-color: #da8181;
+  height: 300px; /* only for demonstration, should be removed */
+}
+
+/* Clear floats after the columns */
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+@media (max-width: 300px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+  
+  .vl {
+    border-left: 6px solid green;
+    height: 500px;
+  }
+  @media print {
+    h1 {page-break-before: always;}
+  }
+}
